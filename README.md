@@ -1,6 +1,7 @@
 ## Fork
  - Fixed CMake not finding Qt5::Test target by adding it to required components
  - Fixed E.30 (ISO does not allow dynamic exception specifications) by setting CMAKE_CXX_STANDARD to older version 11
+   
 Compilation tested on RHEL 9.4, Qt5 5.15.9, fftw 3.3.8, libsamplerate 0.1.9
 
 # liblastfm

@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8.6)
 project(liblastfm)
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
+set(CMAKE_CXX_STANDARD 11)
 
 # general settings
 set(LASTFM_SOVERSION 1)
@@ -31,7 +32,7 @@ set(CMAKE_AUTOMOC ON)
 option(BUILD_WITH_QT4 "Build liblastfm with Qt4" OFF)
 
 if(NOT BUILD_WITH_QT4)
-    find_package(Qt5 REQUIRED COMPONENTS Core Network Xml CONFIG)
+    find_package(Qt5 REQUIRED COMPONENTS Core Network Xml Test CONFIG)
 
     if(BUILD_FINGERPRINT)
         find_package(Qt5Sql REQUIRED CONFIG)
